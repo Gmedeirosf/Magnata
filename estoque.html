@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Estoque</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: black;">
+        <div class="container-fluid">
+
+            <a class="navbar-brand" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="#B3863D" class="bi bi-gitlab" viewBox="0 0 16 16">
+                    <path d="m15.734 6.1-.022-.058L13.534.358a.57.57 0 0 0-.563-.356.6.6 0 0 0-.328.122.6.6 0 0 0-.193.294l-1.47 4.499H5.025l-1.47-4.5A.572.572 0 0 0 2.47.358L.289 6.04l-.022.057A4.044 4.044 0 0 0 1.61 10.77l.007.006.02.014 3.318 2.485 1.64 1.242 1 .755a.67.67 0 0 0 .814 0l1-.755 1.64-1.242 3.338-2.5.009-.007a4.05 4.05 0 0 0 1.34-4.668Z"/>
+                  </svg>
+            </a>
+        </div>
+        </nav>
+     
+    <div class="container">
+        <h2 class="estoque" style="margin-top: 70px;">Estoque de Produtos</h2>
+        <!-- Tabela para exibir os produtos -->
+        <table class="table" style="margin-top: 40px;">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome do Produto</th>
+                    <th>Descrição</th>
+                    <th>Quantidade</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Aqui você pode preencher a tabela com os dados dos produtos existentes -->
+                <tr>
+                    <td>1</td>
+                    <td>Produto A</td>
+                    <td>Descrição do Produto A</td>
+                    <td>100</td>
+                    <td>
+                        <button class="btn btn-sm btn-info">Editar</button>
+                        <button class="btn btn-sm btn-danger">Excluir</button>
+                    </td>
+                </tr>
+                <!-- Adicione mais linhas conforme necessário para mais produtos -->
+            </tbody>
+        </table>
+        <!-- Botão para adicionar novo produto -->
+        <button class="btn btn-primary" data-toggle="modal" data-target="#addProductModal">Adicionar Novo Produto</button>
+    </div>
+
+    <!-- Modal para adicionar novo produto -->
+    <div class="modal fade" id="addProductModal" tabindex="-1" role="dialog" aria-labelledby="addProductModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addProductModalLabel">Adicionar Novo Produto</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Formulário para adicionar novo produto -->
+                    <form>
+                        <div class="form-group">
+                            <label for="productName">Nome do Produto:</label>
+                            <input type="text" class="form-control" id="productName">
+                        </div>
+                        <div class="form-group">
+                            <label for="productDescription">Descrição:</label>
+                            <textarea class="form-control" id="productDescription"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="productQuantity">Quantidade:</label>
+                            <input type="number" class="form-control" id="productQuantity">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" style="background-color: #B3863D; border-color: #B3863D;">Salvar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
